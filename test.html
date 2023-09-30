@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Enrollment</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <form>
+    <label for="course">Select Course:</label>
+    <select id="course" onchange="updateAmount()">
+      <option value="">Select a course</option>
+      <option value="100">Course A</option>
+      <option value="200">Course B</option>
+      <option value="300">Course C</option>
+    </select>
+
+    <br><br>
+
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" readonly>
+
+    <br><br>
+
+    <input type="submit" value="Enroll">
+  </form>
+
+  <script>
+    function updateAmount() {
+      var courseSelect = document.getElementById("course");
+      var amountInput = document.getElementById("amount");
+      amountInput.value = courseSelect.value;
+    }
+  </script>
+</body>
+</html>
